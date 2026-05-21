@@ -1,0 +1,64 @@
+{
+    "source_name": "workday",
+    "index_name": "ai_search_main_index",
+    "healthy_threshold": 0.85,
+    "warning_threshold": 0.65,
+    "rules": [
+    {
+        "field_name": "source_id",
+        "expected_type": "string",
+        "importance": "mandatory",
+        "weight": 3.0,
+        "description": "Stable source-specific identifier"
+    },
+    {
+        "field_name": "title",
+        "expected_type": "string",
+        "importance": "mandatory",
+        "weight": 3.0,
+        "description": "Main searchable title"
+    },
+    {
+        "field_name": "url",
+        "expected_type": "url",
+        "importance": "mandatory",
+        "weight": 2.0,
+        "description": "Canonical source URL"
+    },
+    {
+        "field_name": "source_type",
+        "expected_type": "string",
+        "importance": "mandatory",
+        "weight": 2.0,
+        "allowed_values": ["workday", "people", "sharepoint", "servicenow", "mylearning", "pglearn"]
+    },
+    {
+        "field_name": "category_l1",
+        "expected_type": "string",
+        "importance": "recommended",
+        "weight": 1.5,
+        "description": "Primary search filter/facet"
+    },
+    {
+        "field_name": "owner",
+        "expected_type": "string",
+        "importance": "recommended",
+        "weight": 1.0,
+        "description": "Business or content owner"
+    },
+    {
+        "field_name": "updated_at",
+        "expected_type": "date",
+        "importance": "recommended",
+        "weight": 1.0,
+        "description": "Freshness metadata"
+    },
+    {
+        "field_name": "language",
+        "expected_type": "string",
+        "importance": "optional",
+        "weight": 0.5,
+        "description": "Language metadata"
+    }
+    ]
+}

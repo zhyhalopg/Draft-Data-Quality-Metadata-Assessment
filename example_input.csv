@@ -1,0 +1,11 @@
+source_id,title,url,source_type,category_l1,owner,updated_at,language
+wd-001,Payroll Guide,https://example.com/payroll,workday,HR,HR Team,2026-05-20,en
+wd-002,Benefits Overview,https://example.com/benefits,workday,Benefits,HR Team,2026-05-18,en
+wd-003,Time Off Policy,https://example.com/time-off,workday,HR,People Operations,2026-05-10,en
+wd-004,Compensation Overview,https://example.com/compensation,workday,Compensation,Comp Team,2026-04-11,en
+wd-005,Learning Assignment Guide,https://example.com/learning-assignment,workday,Learning,Learning Team,2026-03-29,en
+wd-006,Employee Profile Update,https://example.com/profile-update,workday,,,2026-05-01,en
+wd-007,Manager Self Service,,workday,Management,People Team,2026-04-15,en
+wd-008,,https://example.com/missing-title,workday,HR,HR Team,2026-04-20,en
+wd-009,Invalid Date Example,https://example.com/invalid-date,workday,HR,HR Team,not-a-date,en
+,Missing Source ID,https://example.com/missing-id,workday,HR,HR Team,2026-05-12,en

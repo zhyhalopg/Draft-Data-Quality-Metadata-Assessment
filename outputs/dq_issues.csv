@@ -1,0 +1,7 @@
+row_index,source_name,field_name,issue_type,severity,message
+5,workday,category_l1,missing_value,warning,Field 'category_l1' is missing/null/empty.
+5,workday,owner,missing_value,warning,Field 'owner' is missing/null/empty.
+6,workday,url,missing_value,blocking,Field 'url' is missing/null/empty.
+7,workday,title,missing_value,blocking,Field 'title' is missing/null/empty.
+8,workday,updated_at,wrong_type,warning,"Field 'updated_at' has invalid type. Expected: date, actual value: 'not-a-date'."
+9,workday,source_id,missing_value,blocking,Field 'source_id' is missing/null/empty.

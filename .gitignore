@@ -1,0 +1,3 @@
+# Cursor-local setup (not versioned)
+.cursor/rules/
+cursor_prompts/
