@@ -1,64 +1,128 @@
 {
-    "source_name": "workday",
-    "index_name": "ai_search_main_index",
-    "healthy_threshold": 0.85,
-    "warning_threshold": 0.65,
-    "rules": [
+  "source_name": "combined_common_sample",
+  "index_name": "ai_search_main_index",
+  "healthy_threshold": 0.85,
+  "warning_threshold": 0.65,
+  "rules": [
     {
-        "field_name": "source_id",
-        "expected_type": "string",
-        "importance": "mandatory",
-        "weight": 3.0,
-        "description": "Stable source-specific identifier"
+      "field_name": "combined_record_id",
+      "expected_type": "string",
+      "importance": "mandatory",
+      "weight": 3.0,
+      "description": "Stable combined-schema record identifier"
     },
     {
-        "field_name": "title",
-        "expected_type": "string",
-        "importance": "mandatory",
-        "weight": 3.0,
-        "description": "Main searchable title"
+      "field_name": "source_id",
+      "expected_type": "string",
+      "importance": "mandatory",
+      "weight": 3.0,
+      "description": "Stable source-specific identifier"
     },
     {
-        "field_name": "url",
-        "expected_type": "url",
-        "importance": "mandatory",
-        "weight": 2.0,
-        "description": "Canonical source URL"
+      "field_name": "source_type",
+      "expected_type": "string",
+      "importance": "mandatory",
+      "weight": 2.0,
+      "allowed_values": ["servicenow", "apps", "quicklinks", "my_learning", "pglearn", "cms_news"],
+      "description": "Active combined dataset source"
     },
     {
-        "field_name": "source_type",
-        "expected_type": "string",
-        "importance": "mandatory",
-        "weight": 2.0,
-        "allowed_values": ["workday", "people", "sharepoint", "servicenow", "mylearning", "pglearn"]
+      "field_name": "title",
+      "expected_type": "string",
+      "importance": "mandatory",
+      "weight": 3.0,
+      "description": "Primary searchable title"
     },
     {
-        "field_name": "category_l1",
-        "expected_type": "string",
-        "importance": "recommended",
-        "weight": 1.5,
-        "description": "Primary search filter/facet"
+      "field_name": "text_clean",
+      "expected_type": "string",
+      "importance": "mandatory",
+      "weight": 3.0,
+      "description": "Search-ready cleaned text (metadata proxy; not content-quality scoring)"
     },
     {
-        "field_name": "owner",
-        "expected_type": "string",
-        "importance": "recommended",
-        "weight": 1.0,
-        "description": "Business or content owner"
+      "field_name": "description",
+      "expected_type": "string",
+      "importance": "recommended",
+      "weight": 1.5,
+      "description": "Short descriptive metadata for keyword/semantic retrieval"
     },
     {
-        "field_name": "updated_at",
-        "expected_type": "date",
-        "importance": "recommended",
-        "weight": 1.0,
-        "description": "Freshness metadata"
+      "field_name": "url",
+      "expected_type": "url",
+      "importance": "recommended",
+      "weight": 1.5,
+      "description": "Canonical link for traceability and navigation"
     },
     {
-        "field_name": "language",
-        "expected_type": "string",
-        "importance": "optional",
-        "weight": 0.5,
-        "description": "Language metadata"
+      "field_name": "category_l1",
+      "expected_type": "string",
+      "importance": "recommended",
+      "weight": 1.5,
+      "description": "Primary facet/filter dimension"
+    },
+    {
+      "field_name": "updated_at",
+      "expected_type": "date",
+      "importance": "recommended",
+      "weight": 1.0,
+      "description": "Freshness metadata"
+    },
+    {
+      "field_name": "quality_flags",
+      "expected_type": "string",
+      "importance": "recommended",
+      "weight": 0.5,
+      "description": "Pipeline quality/governance flags"
+    },
+    {
+      "field_name": "text",
+      "expected_type": "string",
+      "importance": "optional",
+      "weight": 0.25,
+      "description": "Raw text metadata; text_clean is primary for search readiness"
+    },
+    {
+      "field_name": "category_l2",
+      "expected_type": "string",
+      "importance": "optional",
+      "weight": 0.25,
+      "description": "Secondary facet when populated"
+    },
+    {
+      "field_name": "category_l3",
+      "expected_type": "string",
+      "importance": "optional",
+      "weight": 0.25,
+      "description": "Tertiary facet when populated"
+    },
+    {
+      "field_name": "status",
+      "expected_type": "string",
+      "importance": "optional",
+      "weight": 0.5,
+      "description": "Lifecycle/status metadata; sparse by source"
+    },
+    {
+      "field_name": "owner",
+      "expected_type": "string",
+      "importance": "optional",
+      "weight": 0.5,
+      "description": "Ownership/governance metadata; sparse by source"
+    },
+    {
+      "field_name": "is_search_eligible",
+      "expected_type": "string",
+      "importance": "optional",
+      "weight": 0.5,
+      "description": "Search eligibility flag as extracted string (true/false)"
+    },
+    {
+      "field_name": "search_eligibility_reason",
+      "expected_type": "string",
+      "importance": "optional",
+      "weight": 0.25,
+      "description": "Reason when eligibility is constrained"
     }
-    ]
+  ]
 }
