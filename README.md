@@ -2,7 +2,7 @@
 
 ## Overview
 
-Draft prototype for **metadata-focused** data quality (DQ) assessment in the AI Search pipeline.
+Draft for **metadata-focused** data quality (DQ) assessment in the AI Search pipeline.
 
 The script answers one question: **Is extracted metadata search-ready before it is indexed in Azure AI Search?**
 
