@@ -259,3 +259,5 @@ Work in this folder is focused on **preparation and client alignment** — analy
 - Azure Functions integration pattern (trigger, payload, report storage, Cleaning signal) is agreed
 
 Until then, use the prompt templates and rules above rather than expanding scope into ETL, Cleaning, or Azure AI Search automatically.
+
+To be continued
